@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./images/logo.png" />
+    <title>Hounter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="addingCards.js" defer></script>
+    <script src="tourSection.js" defer></script>
+    <script src="reviewForm.js" defer></script>
+  </head>
+  <body>
+    <section id="navbar-section">
+      <nav class="navbar navbar-expand-lg navbar-light top-navbar">
+        <div class="container-fluid mx-5">
+          <a class="navbar-brand" href="/">
+            <img src="./images/logo.png" alt="" />Hounter
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav me-5">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section5">About</a>
+              </li>
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Details
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      data-bs-toggle="modal"
+                      data-bs-target="#sell-form"
+                    >
+                      Sell house
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item"
+                      data-bs-toggle="modal"
+                      data-bs-target="#login-form"
+                    >
+                      login
+                    </button>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item"
+                      data-bs-toggle="modal"
+                      data-bs-target="#reviewForm"
+                    >
+                      Add Review
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-1">
+              <li class="nav-link">
+                <button
+                  class="btn badge rounded-pill text-bg-primary p-3 mt-2 btn-outline-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signIn-form"
+                >
+                  Sign In
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section id="hero-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 hero-left pt-5 ps-5">
+            <div
+              class="container d-flex flex-column justify-content-center"
+              id="intro-text"
+            >
+              <h2 class="fs-1">
+                FIND THE PLACE TO <br />
+                LIVE
+                <span
+                  style="font-family: 'Black Ops One', cursive"
+                  class="fw-bold"
+                >
+                  YOUR DREAMS</span
+                >
+                <br />
+                Easily Here
+              </h2>
+              <p>
+                Everything you need about finding your place to live will be
+                here, where it will be easier for you
+              </p>
+            </div>
+            <div class="container">
+              <div class="search">
+                <i class="fa fa-search"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Have a question? Ask Now"
+                />
+                <button class="btn btn-primary">Search</button>
+              </div>
+            </div>
+            <div class="logos p-4 container">
+              <p class="opacity-50">Our Partnership</p>
+              <div class="navbottom-logos">
+                <a href="/"
+                  ><img src="images/nav bottom logo 1.png" class="mw-1" alt=""
+                /></a>
+                <a href="/">
+                  <img src="images/nav bottom logo 2.png" alt="" class="me-1" />
+                </a>
+                <a href="/">
+                  <img src="images/traveloka_logo 3.png" class="me-1" alt="" />
+                </a>
+                <a href="/">
+                  <img src="images/traveloka_logo 4.png" alt="" class="me-1" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 hero-buttons pt-5">
+            <div class="row d-flex justify-content-evenly">
+              <div
+                class="col-md-6 col-lg-5 bg-body-tertiary navcard-1 d-flex justify-content-between"
+              >
+                <div class="nav-img-card-1">
+                  <img
+                    class="navcardimg-1"
+                    src="images/cardimg-1.png"
+                    alt=""
+                    width="56px"
+                  />
+                  <img
+                    class="navcardimg-2"
+                    src="images/cardimg-2.png"
+                    alt=""
+                    width="56px"
+                  />
+                  <img
+                    class="navcardimg-3"
+                    src="./images/cardimg-1.png"
+                    alt=""
+                    width="56px"
+                  />
+                </div>
+                <div
+                  class="d-flex flex-column justify-content-center"
+                  style="margin-left: 1.3rem"
+                >
+                  <h5 style="font-size: 12px; font-weight: bolder">
+                    1K People
+                  </h5>
+                  <p style="font-size: 10px; opacity: 0.6">
+                    Successfully Getting Home
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3 bg-body-tertiary navcard-1">
+                <div
+                  class="nav-img-card-2 d-flex justify-content-center align-items-sm-center"
+                >
+                  <img
+                    class="navcardimg-1"
+                    src="./images/cardimg-1.png"
+                    alt=""
+                    width="56px"
+                  />
+                  <div>
+                    <h5 style="font-size: 12px; font-weight: bolder">
+                      56 Houses
+                    </h5>
+                    <p style="font-size: 10px; opacity: 0.6">Sold Monthly</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3 bg-body-tertiary navcard-1">
+                <div
+                  class="nav-img-card-2 d-flex justify-content-center align-items-sm-center"
+                >
+                  <img
+                    class="navcardimg-1"
+                    src="./images/cardimg-1.png"
+                    alt=""
+                    width="56px"
+                  />
+                  <div>
+                    <h5 style="font-size: 12px; font-weight: bolder">
+                      56 Houses
+                    </h5>
+                    <p style="font-size: 10px; opacity: 0.6">Sold Monthly</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      id="reviewForm"
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="card">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
+              <h2 class="card-title">Review</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="card-body">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id="1"
+                  aria-describedby="helpId"
+                  placeholder=""
+                />
+                <label for="1" class="form-label">Comment</label>
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  name=""
+                  placeholder="Description"
+                  id="2"
+                  rows="5"
+                ></textarea>
+              </div>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center"
+            >
+              <div class="d-inline-flex rating-container mx-3">
+                <span
+                  class="fa-solid fa-star rating"
+                  data-clicked="false"
+                  id="rating-5"
+                  style="cursor: pointer"
+                ></span>
+                <span
+                  class="fa-solid fa-star rating"
+                  data-clicked="false"
+                  id="rating-4"
+                  style="cursor: pointer"
+                ></span>
+                <span
+                  class="fa-solid fa-star rating"
+                  data-clicked="false"
+                  id="rating-3"
+                  style="cursor: pointer"
+                ></span>
+                <span
+                  class="fa-solid fa-star rating"
+                  data-clicked="false"
+                  id="rating-2"
+                  style="cursor: pointer"
+                ></span>
+                <span
+                  class="fa-solid fa-star rating"
+                  data-clicked="false"
+                  id="rating-1"
+                  style="cursor: pointer"
+                ></span>
+              </div>
+              <button type="button" class="btn btn-primary">Add Review</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Review form modal -->
+    <div
+      class="modal fade bg-blur"
+      id="sell-form"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-blur">
+          <div class="modal-header">
+            <i class="fw-bolder fs-3 fa-solid fa-shop"></i>
+            <h5 class="modal-title mx-auto px-3">
+              Add Your House to Marketplace
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body container">
+            <form action="action.php">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  autocomplete=""
+                  class="form-control"
+                  id="sellForm-address"
+                  placeholder="Username"
+                />
+                <label for="sellForm-address" class="form-label"
+                  >House Address</label
+                >
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sellForm-Email"
+                  placeholder="Email"
+                />
+                <i class="fa-solid fa-at input-group-text"></i>
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Phone number"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+              </div>
+              <label for="imageUploads" class="form-label d-block"
+                >Upload images</label
+              >
+              <div class="btn-group" id="imageUploads">
+                <div class="btn btn-warning" style="cursor: pointer !important">
+                  <i class="fa-regular fa-image">
+                    <input type="image" class="d-none" />
+                  </i>
+                </div>
+                <div class="btn btn-warning" style="cursor: pointer !important">
+                  <i class="fa-regular fa-image">
+                    <input type="image" class="d-none" id="i2" />
+                  </i>
+                </div>
+                <div class="btn btn-warning" style="cursor: pointer !important">
+                  <i class="fa-regular fa-image">
+                    <input type="image" class="d-none" id="i3" />
+                  </i>
+                </div>
+                <div class="btn btn-warning" style="cursor: pointer !important">
+                  <i class="fa-regular fa-image">
+                    <input type="image" class="d-none" id="i4" />
+                  </i>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Add to Market</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- sell form modal -->
+    <div
+      class="modal fade bg-blur"
+      id="signIn-form"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-blur">
+          <div class="modal-header">
+            <i class="fw-bolder fs-3 fa-brands fa-wpforms"></i>
+            <h5 class="modal-title mx-auto">Signin for more services</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body container">
+            <form action="action.php">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  autocomplete=""
+                  class="form-control"
+                  id="nameInput"
+                  placeholder="Username"
+                />
+                <label for="nameInput" class="form-label">Username</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Email"
+                  placeholder="name@example.com"
+                />
+                <label for="Email" class="form-label">Email address</label>
+              </div>
+              <div class="input-group mb-3 mx-auto">
+                <label for="birthInput" class="input-group-text"
+                  >Date of Birth</label
+                >
+                <input
+                  type="date"
+                  class="form-control px-3 pe-0"
+                  id="birthInput"
+                  placeholder="mm/dd/yyyy"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Phone number"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  name=""
+                  placeholder="Password"
+                  autocomplete="new-password"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  name=""
+                  placeholder="Confirm Password"
+                  autocomplete="current-password"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-passport"></i>
+                </span>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save User</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Signin form modal -->
+    <div
+      class="modal fade bg-blur py-5"
+      id="login-form"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog py-5">
+        <div class="modal-content bg-blur">
+          <div class="modal-header">
+            <i class="fw-bolder fs-3 fa-brands fa-wpforms"></i>
+            <h5 class="modal-title mx-auto w-75 text-center">login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body container">
+            <form action="action.php">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  autocomplete=""
+                  class="form-control"
+                  id=""
+                  placeholder="Username"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-user"></i>
+                </span>
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  name=""
+                  placeholder="Password"
+                  autocomplete="new-password"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- login form modal -->
+    <div
+      class="modal fade bg-blur"
+      id="seller-contact-card"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="contact-card container mx-auto">
+          <div class="modal-header">
+            <h2 class="text-center modal-title">Robert Fox</h2>
+          </div>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          <div class="info my-5">
+            <div class="my-3">
+              <label for="contactCard-phoneNumber" class="form-label"
+                >Phone</label
+              >
+              <span class="input-group mb-3">
+                <h6 id="contactCard-phoneNumber" class="form-control mb-0"></h6>
+                <span class="input-group-text">
+                  <i class="fa-solid fa-square-phone"></i>
+                </span>
+              </span>
+            </div>
+            <div class="my-3">
+              <label for="contactCard-Email" class="form-label">Email</label>
+              <span class="input-group">
+                <h6 id="contactCard-Email" class="form-control mb-0"></h6>
+                <span class="input-group-text">
+                  <i class="fa-solid fa-at"></i>
+                </span>
+              </span>
+            </div>
+            <div class="my-3">
+              <label for="contactCard-Address" class="form-label"
+                >Address</label
+              >
+              <span class="input-group">
+                <h6 id="contactCard-Address" class="form-control mb-0"></h6>
+                <span class="input-group-text">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+              </span>
+            </div>
+          </div>
+          <!-- Additional contact information -->
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap 5.3.2 JS (optional, for toggling functionality) -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
